@@ -1,34 +1,57 @@
-<!DOCTYPE html>
-<html lang=eng-us>
-    <head>
-        <meta charset=utf-8>
-        <title>an UTSEUS flashcard app</title>
-        <script src="myscript.js"></script>
-        <link rel="stylesheet" href="mystyle.css">
-    </head>
-    <body>
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Identity by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body> 
         <div id="chinese">chinese goes here</div>
         <div id="pinyin" class="hidden" onclick="reveal('pinyin')">reveal
         </div>
         <div id=english" class="hidden" onclick="reveal('english')">
         reveal</div>
         <input type="button" value="try me" onclick="tryme()"/>
-    </body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<h1> Utseus data science </h1>
+						</header>
+						
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Hadrien Pavy</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
 </html>
-
-var data =[
-{"english":"computer","chinese":"电脑","pinyin":"dianao"},
-{"english":"i","chinese":"我","pinyin":"wo"},
-{"english":"weather","chinese":"天气","pinyin":"tianqi"}
-;]
-
-var i=0
-function tryme (){ 
-    i = Math.floor(Math.random() * data.length);
-    document.getElementById("chinese").innerHTLM="reveal";
-    document.getElementById("pinyin").innerHTLM="reveal";
-} 
-
-function reveal (mydiv){
-        document.getElementById("mydiv").innerHTLM=data[i][mydiv];
-}
