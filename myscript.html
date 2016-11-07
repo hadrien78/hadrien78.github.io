@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang=eng-us>
+    <head>
+        <meta charset=utf-8>
+        <title>an UTSEUS flashcard app</title>
+        <script src="myscript.js"></script>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <div id="chinese">chinese goes here</div>
+        <div id="pinyin" class="hidden" onclick="reveal('pinyin')">reveal
+        </div>
+        <div id=english" class="hidden" onclick="reveal('english')">
+        reveal</div>
+        <input type="button" value="try me" onclick="tryme()"/>
+    </body>
+</html>
+
+var data =[
+{"english":"computer","chinese":"电脑","pinyin":"dianao"},
+{"english":"i","chinese":"我","pinyin":"wo"},
+{"english":"weather","chinese":"天气","pinyin":"tianqi"}
+;]
+
+var i=0
+function tryme (){ 
+    i = Math.floor(Math.random() * data.length);
+    document.getElementById("chinese").innerHTLM="reveal";
+    document.getElementById("pinyin").innerHTLM="reveal";
+} 
+
+function reveal (mydiv){
+        document.getElementById("mydiv").innerHTLM=data[i][mydiv];
+}
